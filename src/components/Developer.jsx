@@ -33,16 +33,6 @@ const Developer = ({ animationName = 'idle', ...props }) => {
     return () => actions[animationName].fadeOut(0.5);
   }, [actions, animationName]);
 
-  // Update skin, body, and hair materials
-  useEffect(() => {
-    if (materials.Wolf3D_Skin) {
-      materials.Wolf3D_Skin.color = new Color('tan'); // Brown color for the head
-    }
-    if (materials.Wolf3D_Body) {
-      materials.Wolf3D_Body.color = new Color(0xA0522D); // Brown color for the arms and body
-    }
-  }, [materials.Wolf3D_Skin, materials.Wolf3D_Body]);
-
   return (
     <group ref={group} {...props} dispose={null}>
       <primitive object={nodes.Hips} />

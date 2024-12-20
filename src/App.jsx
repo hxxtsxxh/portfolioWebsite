@@ -5,19 +5,24 @@ import Navbar from './sections/Navbar.jsx';
 import Contact from './sections/Contact.jsx';
 import Projects from './sections/Projects.jsx';
 import Experience from './sections/Experience.jsx';
+import CustomCursor from './components/CustomCursor.jsx';
+import { useState } from "react";
 
 const App = () => {
-  return (
-    <main className="max-w-7xl mx-auto relative">
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Experience />
-      <Contact />
-      <Footer />
-    </main>
-  );
+    const [cursorVariant] = useState("default");
+
+    return (
+        <main className="max-w-7xl mx-auto relative">
+            <CustomCursor cursorVariant={cursorVariant} />
+            <Navbar />
+            <Hero />
+            <About />
+            <Projects />
+            <Experience />
+            <Contact />
+            <Footer />
+        </main>
+    );
 };
 
 export default App;

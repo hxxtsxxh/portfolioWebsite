@@ -4,13 +4,44 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+#root {
+  cursor: none !important;
+}
+
+
 * {
   scroll-behavior: smooth;
+  cursor: none !important;
+  -webkit-cursor: none;
+  -moz-cursor: none;
+  -ms-cursor: none;
 }
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+}
+
+
 
 body {
   background: #010103;
   font-family: 'General Sans', sans-serif;
+  cursor: none !important;
+  -webkit-cursor: none;
+  -moz-cursor: none;
+  -ms-cursor: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 @layer utilities {
